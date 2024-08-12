@@ -1,4 +1,4 @@
-name: Artifact test
+name: Pull request
 
 on:
   workflow_dispatch:
