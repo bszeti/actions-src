@@ -22,5 +22,5 @@ jobs:
           echo $EVENT_CONTEXT
 
   trigger_workflow_other_repo:
-    uses: bszeti/actions/.github/workflows/push.yaml@main
+    uses: bszeti/actions/.github/workflows/myworkflow.yaml@main
     
