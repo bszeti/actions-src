@@ -40,6 +40,6 @@ jobs:
         run: |
           echo $EVENT_CONTEXT | jq .
 
-  trigger_workflow_other_repo:
-    uses: bszeti/actions/.github/workflows/myworkflow.yaml@main
+  # trigger_workflow_other_repo:
+  #   uses: bszeti/actions/.github/workflows/myworkflow.yaml@main
     
