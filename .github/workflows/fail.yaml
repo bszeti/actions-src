@@ -2,39 +2,12 @@ name: Fail
 
 on:
   workflow_dispatch:
-  pull_request:
-    types:
-      - opened
-      - enqueued
+  # pull_request:
+  #   types:
+  #     - opened
+  #     - enqueued
   merge_group:
     types: [checks_requested]
-  # pull_request:
-  #   branches: ['*']
-  #   types:
-  #     # - closed
-  #     - assigned
-  #     - unassigned
-  #     - labeled
-  #     - unlabeled
-  #     - opened
-  #     - edited
-  #     - closed
-  #     - reopened
-  #     - synchronize
-  #     - converted_to_draft
-  #     - locked
-  #     - unlocked
-  #     - enqueued
-  #     - dequeued
-  #     - milestoned
-  #     - demilestoned
-  #     - ready_for_review
-  #     - review_requested
-  #     - review_request_removed
-  #     - auto_merge_enabled
-  #     - auto_merge_disabled
-  # push:
-  #   branches: ['*']
 
 
 jobs:
