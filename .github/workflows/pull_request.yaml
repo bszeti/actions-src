@@ -29,9 +29,6 @@ on:
       # - auto_merge_disabled
   pull_request_review:
     types: [submitted]
-  # push:
-  #   branches: ['*']
-
 
 jobs:
   event:
@@ -42,6 +39,11 @@ jobs:
         run: |
           echo $EVENT_CONTEXT | jq .
 
-  # trigger_workflow_other_repo:
-  #   uses: bszeti/actions/.github/workflows/myworkflow.yaml@main
+  # We don't fail "myjob" here
+  # myjob:
+  #   runs-on: ubuntu-latest
+  #   steps:
+  #     - run: |
+  #         echo "Not doing anything"
+
     
