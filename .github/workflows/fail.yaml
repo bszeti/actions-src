@@ -2,6 +2,9 @@ name: Fail
 
 on:
   workflow_dispatch:
+  pull_request:
+    types:
+      - enqueued
   merge_group:
     types: [checks_requested]
   # pull_request:
