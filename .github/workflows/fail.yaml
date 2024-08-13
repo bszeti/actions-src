@@ -3,8 +3,8 @@ name: Fail
 on:
   workflow_dispatch:
 
+  # see https://medium.com/@kojoru/how-to-set-up-merge-queues-in-github-actions-59381e5f435a
   merge_group:
-    types: [checks_requested]
 
 
 jobs:
@@ -20,7 +20,8 @@ jobs:
   myjob:
     runs-on: ubuntu-latest
     steps:
-      - run: false
+      - if: contains(github.event.pull_request.title , 'fail')
+        run: echo "::error :: Failing...."
 
   # trigger_workflow_other_repo:
   #   uses: bszeti/actions/.github/workflows/myworkflow.yaml@main
