@@ -3,8 +3,11 @@ name: Fail
 on:
   workflow_dispatch:
 
+  # see https://medium.com/@kojoru/how-to-set-up-merge-queues-in-github-actions-59381e5f435a
+  # Note
+  # error: GH006: Protected branch update failed for refs/heads/test.
+  # A pull request for this branch has been added to a merge queue. Branches that are queued for merging cannot be updated. To modify this branch, dequeue the associated pull request.
   merge_group:
-    types: [checks_requested]
 
 
 jobs:
@@ -20,7 +23,9 @@ jobs:
   myjob:
     runs-on: ubuntu-latest
     steps:
-      - run: false
+      - if: contains(github.event.pull_request.title , 'fail')
+        run: |
+          echo "::error :: Failing...."
 
   # trigger_workflow_other_repo:
   #   uses: bszeti/actions/.github/workflows/myworkflow.yaml@main
