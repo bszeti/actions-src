@@ -27,6 +27,8 @@ on:
       - review_request_removed
       - auto_merge_enabled
       - auto_merge_disabled
+  pull_request_review:
+    types: [submitted]
   # push:
   #   branches: ['*']
 
@@ -40,6 +42,6 @@ jobs:
         run: |
           echo $EVENT_CONTEXT | jq .
 
-  trigger_workflow_other_repo:
-    uses: bszeti/actions/.github/workflows/myworkflow.yaml@main
+  # trigger_workflow_other_repo:
+  #   uses: bszeti/actions/.github/workflows/myworkflow.yaml@main
     
