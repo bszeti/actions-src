@@ -25,7 +25,8 @@ jobs:
     steps:
       - if: contains(github.event.pull_request.title , 'fail')
         run: |
-          echo "::error :: Failing...."
+          echo "::error ::Failing...."
+          exit 1
 
   # trigger_workflow_other_repo:
   #   uses: bszeti/actions/.github/workflows/myworkflow.yaml@main
