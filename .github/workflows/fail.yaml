@@ -2,6 +2,8 @@ name: Pull request
 
 on:
   workflow_dispatch:
+  merge_group:
+    types: [checks_requested]
   # pull_request:
   #   branches: ['*']
   #   types:
