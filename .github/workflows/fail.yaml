@@ -23,7 +23,8 @@ jobs:
   myjob:
     runs-on: ubuntu-latest
     steps:
-      - if: contains(github.event.pull_request.title , 'fail')
+      # - if: contains(github.event.pull_request.title , 'fail')
+      - if: contains(github.event.merge_group.head_commit.message , 'fail')
         run: |
           echo "::error ::Failing...."
           exit 1
