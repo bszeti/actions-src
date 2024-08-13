@@ -21,7 +21,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - if: contains(github.event.pull_request.title , 'fail')
-        run: echo "::error :: Failing...."
+        run: |
+          echo "::error :: Failing...."
 
   # trigger_workflow_other_repo:
   #   uses: bszeti/actions/.github/workflows/myworkflow.yaml@main
