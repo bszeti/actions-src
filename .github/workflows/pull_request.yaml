@@ -40,10 +40,10 @@ jobs:
           echo $EVENT_CONTEXT | jq .
 
   # We don't fail "myjob" here
-  myjob:
-    runs-on: ubuntu-latest
-    steps:
-      - run: |
-          echo "Not doing anything"
+  # myjob:
+  #   runs-on: ubuntu-latest
+  #   steps:
+  #     - run: |
+  #         echo "Not doing anything"
 
     
