@@ -24,11 +24,14 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       # - if: contains(github.event.pull_request.title , 'fail')
+      - run: |
+          echo "Creating artifact..."
+          sleep 10
+          echo "Done"
       - if: contains(github.event.merge_group.head_commit.message , 'fail')
         run: |
           echo "::error ::Failing...."
           exit 1
 
-  # trigger_workflow_other_repo:
-  #   uses: bszeti/actions/.github/workflows/myworkflow.yaml@main
+
     

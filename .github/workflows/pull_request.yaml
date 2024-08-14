@@ -27,8 +27,6 @@ on:
       # - review_request_removed
       # - auto_merge_enabled
       # - auto_merge_disabled
-  pull_request_review:
-    types: [submitted]
 
 jobs:
   event:
@@ -44,6 +42,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: |
-          echo "Not doing anything"
+          echo "Running validation..."
+          sleep 3
+          echo "Done"
 
     
