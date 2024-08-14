@@ -20,7 +20,7 @@ jobs:
           echo $EVENT_CONTEXT | jq .
   
   # Fail "myjob" with run: false
-  myjob:
+  validation_or_pipeline:
     runs-on: ubuntu-latest
     steps:
       # - if: contains(github.event.pull_request.title , 'fail')
